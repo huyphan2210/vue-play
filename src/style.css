@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --nav-bar-height: 32px; 
+  --nav-bar-height: 10%; 
 }
 
 a {
