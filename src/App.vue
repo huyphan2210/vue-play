@@ -1,11 +1,10 @@
 <script setup lang="ts">
-  import Navigation from './components/navigation/Navigation.vue';
-  import HelloWorld from './components/body/HelloWorld.vue'
+import Ratings from './components/body/Ratings.vue';
+
 </script>
 
 <template>
-  <Navigation />
-  <HelloWorld msg="Huy website" />
+  <Ratings />
 </template>
 
 <style scoped>
