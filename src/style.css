@@ -1,83 +1,113 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
-  --nav-bar-height: 32px; 
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Overpass');
 
 body {
-  margin: 0;
-  background-color: black;
-  display: flex;
-  place-items: center;
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #141519;
+    display: flex;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    main {
+        position: fixed;
+        font-family: 'Overpass', sans-serif;
+        height: 50%;
+        aspect-ratio: 1/1;
+        background-color: #202731;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 24px;
+        padding: 24px;
+    }
+        #ratingQuestion {
+            color: white;
+        }
+
+        #ratingQuote {
+            color: hsl(217, 12%, 63%);
+        }
+
+        .starIcon, .ratingNumber{
+            width: 12%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+            background-color: #242e3a;
+            border-radius: 50%;
+            color: hsl(216, 12%, 54%);
+        }
+
+        .ratingNumber:hover {
+            cursor: pointer;
+            background-color: hsl(25, 97%, 53%);
+            color: white;
+        }
+
+        .ratingNumber.active {
+            color: white;
+            background-color: #7d8895;
+        }
+
+        .ratings{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        main button {
+            width: 100%;
+            height: 10%;
+            background-color: hsl(25, 97%, 53%);
+            color: white;
+            border-color: transparent;
+            border-radius: 32px;
+            letter-spacing: 1vh;
+            font-weight: 700;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main button:hover {
+            cursor: pointer;
+        }
+
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 1vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+        .attribution { font-size: 11px; text-align: center; }
+            
+        .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-height: 950px) and (max-width: 60vh) {
+    main {
+        height: 40%;
+    }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+@media screen and (max-height: 740px) and (max-width: 375px) {
+    main {
+        height: 40%;
+    }
+    
+    main h1 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
 
-.card {
-  padding: 2em;
-}
-
-#app {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    .ratings{
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
 }
