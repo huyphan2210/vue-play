@@ -61,7 +61,7 @@ body {
         main button {
             width: 100%;
             height: 10%;
-            background-color: hsl(25, 97%, 53%);
+            background-color: hsl(217, 12%, 63%);
             color: white;
             border-color: transparent;
             border-radius: 32px;
@@ -74,7 +74,17 @@ body {
         }
 
         main button:hover {
+            cursor: not-allowed;
+        }
+
+        .activeSubmit {
+            background-color: hsl(25, 97%, 53%);
+        }
+
+        .activeSubmit:hover {
             cursor: pointer;
+            background-color: white;
+            color: hsl(25, 97%, 53%);
         }
 
     footer {
